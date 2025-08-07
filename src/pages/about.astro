@@ -1,0 +1,132 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const pageTitle = "About Me";
+const hobbies = [
+  "Playing guitar",
+  "Programming",
+  "Listening to Music",
+  "Learning languages",
+  "Learning various things",
+];
+
+const skills = [
+  "CATIA V5",
+  "OnShape",
+  "OpenRocket",
+  "OpenMotor",
+  "Research",
+  "Dart (Programming language)",
+  "Python",
+  "Deep Learning",
+  "SimScale (Simulation Software)",
+  "ANSYS",
+];
+
+const goals_completed = [
+  "Develop a Vector control for a rocket",
+  "Make an RC airplane",
+];
+
+const goals_todo = [
+  "Make a 1km apogee J class sounding rocket",
+  "Launch a 1km apogee J class sounding rocket",
+  "Launch a rocket with an aero-spike nozzle",
+  "Launch a multi-stage rocket",
+  "Make a custom PCB for a rocket",
+];
+
+const languages = [
+  "English: Fluent",
+  "Hindi: Intermediate",
+  "German (Deutsch): Fine",
+  "Japanese （日本語): Beginner",
+];
+---
+
+<Layout pageTitle={pageTitle}>
+  <body>
+    <h1>Who am I?</h1>
+    <ul>
+      <li>
+        I'm Dhruv just an ordinary guy pursuing my Bachelors degree in Aerospace
+        Engineering.
+      </li>
+      <li>My age is xx.</li>
+      <li>I live in India.</li>
+      <li>I am also a polygot.</li>
+      <li>
+        I am also a guy who finds himself hard to write his own About Me page.
+      </li>
+    </ul>
+    <ul></ul>
+
+    <br />
+
+    <p>Here is a list of my current goals.</p>
+    <ul>
+      {
+        goals_completed.map((goal_completed) => (
+          <li class="goal">
+            <>
+              <input
+                type="checkbox"
+                id="goal_completed"
+                name="goal_completed"
+                value="completed"
+                checked
+                disabled
+              />
+              <label for="task1">{goal_completed}</label>
+            </>
+          </li>
+        ))
+      }
+      {
+        goals_todo.map((goal_todo) => (
+          <li class="goal">
+            <>
+              <input
+                type="checkbox"
+                id="goal_todo"
+                name="goal_todo"
+                value="todo"
+                disabled
+              />
+              <label for="task1">{goal_todo}</label>
+            </>
+          </li>
+        ))
+      }
+    </ul>
+
+    <br />
+
+    <p>I can speak these languages</p>
+    <ul>
+      {languages.map((language) => <li>{language}</li>)}
+    </ul>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+  </body>
+</Layout>
