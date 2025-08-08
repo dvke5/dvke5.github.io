@@ -5,7 +5,7 @@
   --text-color: #000000;
 }
 
-body {
+body:not(.footer) {
   color: var(--text-color);
   background-color: var(--background);
   font-family: "Montserrat", sans-serif;
@@ -13,6 +13,8 @@ body {
   font-weight: 300;
   font-style: normal;
   margin: 9% auto;
+  padding: 10px;
+  padding-top: 60px;
 }
 
 .header {
@@ -25,12 +27,14 @@ body {
   text-align: center;
   margin: 1%;
   left: 50%;
-  transform: translate(-50%);
+  transform: translate(-51%);
 }
 
 .footer {
-  background-color: #545454;
-  position: fixed;
+  background-color: #000000;
+  color: #ffffff;
+  text-decoration: none;
+  /* position: fixed; */
   bottom: 0;
   width: 100%;
   text-align: center;

@@ -1,5 +1,23 @@
 ---
 import Navigation from "./Navigation.astro";
+import Logo from "../assets/logo.svg";
 ---
 
-<Navigation />
+<html>
+  <head>
+    <style>
+      .main-logo {
+        height: 2px;
+        padding: 20px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <span>
+      <a href="/" class="main-logo" aria-label="Main logo of the website">
+        <Logo />
+      </a>
+      <Navigation />
+    </span>
+  </body>
+</html>
