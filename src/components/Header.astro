@@ -3,22 +3,12 @@ import Navigation from "./Navigation.astro";
 import Logo from "../assets/logo.svg";
 ---
 
-<html>
-  <head>
-    <style>
-      .main-logo {
-        height: 2px;
-        padding: 20px auto;
-        filter: invert(0);
-      }
-    </style>
-  </head>
-  <body>
-    <span>
-      <a href="/" class="main-logo" aria-label="Main logo of the website">
-        <Logo />
-      </a>
-      <Navigation />
-    </span>
-  </body>
-</html>
+<span class="logo">
+  <a href="/" class="main-logo" aria-label="Main logo of the website">
+    <Logo />
+  </a>
+</span>
+
+<span class="navigation">
+  <Navigation />
+</span>

@@ -1,5 +1,14 @@
 ---
-const { website, username = "", platform } = Astro.props;
+const { icon, website, username = "", platform } = Astro.props;
 ---
 
-<a href={`${website}/${username}`}>{platform}</a>
+<style>
+  a {
+    text-decoration: none;
+  }
+</style>
+
+<span>
+  <img class="social-icons" src={`${icon.src}`} alt={`${website} icon`} />
+  <a href={`${website}/${username}`}>{platform}&nbsp;&nbsp;</a>
+</span>

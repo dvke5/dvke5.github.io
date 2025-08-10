@@ -6,3 +6,37 @@
   font-weight: 100;
   font-style: normal;
 }
+
+.welcome {
+  display: flex;
+  columns: 2;
+  align-items: center;
+  text-align: center;
+  padding-inline: 40px;
+  align-content: center;
+}
+
+.welcome-heading {
+  width: 60%;
+
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.luft-boeing {
+  border-radius: 100px;
+  height: 200px;
+  width: auto;
+  padding: 50px;
+}
+
+.intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.intro img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}

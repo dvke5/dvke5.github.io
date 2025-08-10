@@ -1,15 +1,24 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import "../styles/index.css";
+import { Image } from "astro:assets";
+import luftBoeing from "../assets/luft.png";
 
 const pageTitle = "Home";
 ---
 
 <Layout pageTitle={pageTitle}>
   <body>
-    <h1>
-      <span class="greeting">こんにちは</span>, I am Dhruv Kakade an Aerospace
-      Engineering.
-    </h1>
+    <div class="welcome">
+      <h1 class="welcome-heading">
+        <span class="greeting">こんにちは</span>, I am Dhruv Kakade an Aerospace
+        Engineer.
+      </h1>
+      <Image
+        src={luftBoeing}
+        alt="An Image of a Lufthansa Boeing 747-8 airplane flying across during a beautiful sunset."
+        class="luft-boeing"
+      />
+    </div>
   </body>
 </Layout>

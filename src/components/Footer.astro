@@ -1,15 +1,29 @@
 ---
 import Social from "./Social.astro";
+import fiverrLogo from "../assets/social/fiverr.svg";
+import githubLogo from "../assets/social/github.svg";
+import linkedinLogo from "../assets/social/linkedin.svg";
 ---
 
 <p>
   &copy; Designed and developed by Dhruv Kakade (dvke5, deltakiro). I dont think
   i got any rights for this reserved yet.
 </p>
-<Social website="https://github.com" username="dvke5" platform="GitHub" />
 <Social
+  icon={fiverrLogo}
+  website="https://github.com"
+  username="dvke5"
+  platform="GitHub"
+/>
+<Social
+  icon={githubLogo}
   website="https://linkedin.com/in"
   username="dvke5"
   platform="LinkedIn"
 />
-<Social website="https://fiverr.com" username="" platform="Fiverr" />
+<Social
+  icon={linkedinLogo}
+  website="https://fiverr.com"
+  username=""
+  platform="Fiverr"
+/>

@@ -1,0 +1,39 @@
+.navigation {
+  backdrop-filter: blur(5px);
+  background-color: #ffffff50;
+  opacity: 0.9;
+  padding: 25px;
+  font-size: 20px;
+  margin: 15px;
+  border-radius: 100px;
+  width: 90%;
+}
+
+.links {
+  transform: translate(0%, -50%);
+}
+a {
+  text-decoration: none;
+}
+
+.home,
+.resume,
+.projects,
+.about {
+  padding-inline: 20px;
+}
+
+.home:hover,
+.resume:hover,
+.projects:hover,
+.about:hover {
+  background-color: #ffffff82;
+  backdrop-filter: blur(5px);
+  padding-inline: 50px;
+  padding: 15px;
+  border-radius: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.1s ease;
+}
