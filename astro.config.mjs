@@ -5,4 +5,5 @@ import { defineConfig } from "astro/config";
 export default defineConfig({
   site: "https://dvke5.github.io/",
   base: "/dvke5.github.io",
+  // base: "",
 });

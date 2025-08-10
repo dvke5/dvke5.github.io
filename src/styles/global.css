@@ -1,8 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --background: #ffffff;
+  --background: #d5d5d5;
+  --background-purple: #8a6fc1;
   --text-color: #000000;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
 }
 
 body:not(.footer) {
@@ -12,29 +18,36 @@ body:not(.footer) {
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
-  margin: 9% auto;
-  padding: 10px;
-  padding-top: 60px;
+  /* margin: 9% auto; */
+  /* padding: 10px; */
+  /* padding-top: 60px; */
+  background-image: linear-gradient(
+    to bottom right,
+    var(--background),
+    var(--background-purple)
+  );
+  /* height: 100%; */
 }
 
 .header {
   border-radius: 50px;
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 90%;
-  backdrop-filter: blur(5px);
+  align-self: center;
+  vertical-align: middle;
   background-color: #00000040;
+  backdrop-filter: blur(5px);
   text-align: center;
-  margin: 1%;
-  left: 50%;
-  transform: translate(-51%);
+  margin: auto;
+  /* transform: translate(-51%); */
 }
 
 .footer {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #000000;
   text-decoration: none;
-  /* position: fixed; */
+  position: absolute;
   bottom: 0;
   width: 100%;
   text-align: center;
