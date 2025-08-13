@@ -1,6 +1,7 @@
 ---
 import Logo from "../assets/logo.svg";
 import "../styles/navigation.css";
+import Hamburger from "./Hamburger.astro";
 ---
 
 <html>
@@ -8,11 +9,12 @@ import "../styles/navigation.css";
     <style></style>
   </head>
   <body>
-    <span class="links">
+    <Hamburger />
+    <div class="links">
       <a class="home" href="/">Home</a>
       <a class="resume" href="/resume">My Resumé</a>
       <a class="projects" href="/projects">My Projects</a>
       <a class="about" href="/about">About me</a>
-    </span>
+    </div>
   </body>
 </html>

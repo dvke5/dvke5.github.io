@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --background: #dddddd;
-  --background-purple: #dccaff;
+  --background: #ffffff;
+  --background-2: #a3a3a3;
   --text-color: #000000;
+  --link-color: #50008d;
 }
 
 html {
@@ -23,7 +24,7 @@ body:not(.footer) {
   background-image: linear-gradient(
     to bottom right,
     var(--background),
-    var(--background-purple)
+    var(--background-2)
   );
   margin: auto;
   padding: 90px;
@@ -59,8 +60,8 @@ body:not(.footer) {
 }
 
 .footer {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: var(--background);
+  color: var(--text-color);
   text-decoration: none;
   margin: auto;
   margin-bottom: 1%;
@@ -74,4 +75,6 @@ body:not(.footer) {
 
 .social-icons {
   max-height: 18px;
+  align-items: center;
+  text-align: center;
 }

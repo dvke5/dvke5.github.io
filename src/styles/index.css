@@ -8,19 +8,28 @@
 }
 
 .welcome {
-  display: flex;
-  columns: 2;
+  display: block;
   align-items: center;
   text-align: center;
-  padding-inline: 40px;
+  margin: auto;
   align-content: center;
 }
 
-.welcome-heading {
-  width: 60%;
+@media screen and (min-width: 1060px) {
+  .welcome {
+    display: flex;
+    columns: 2;
+    align-items: center;
+    text-align: center;
+    padding-inline: 40px;
+    align-content: center;
+  }
+  .welcome-heading {
+    width: 60%;
 
-  word-wrap: break-word;
-  text-align: center;
+    word-wrap: break-word;
+    text-align: center;
+  }
 }
 
 .luft-boeing {
