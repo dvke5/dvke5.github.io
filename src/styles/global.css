@@ -2,9 +2,19 @@
 
 :root {
   --background: #ffffff;
-  --background-2: #a3a3a3;
+  --background-2: #454545;
+  --background-dark: #000000;
+  --background-dark-2: #5d5d5d;
   --text-color: #000000;
-  --link-color: #50008d;
+  --text-color-dark: #ffffff;
+  --link-light-color: #e0b7ff;
+  --link-dark-color: #7f3fb1;
+  --header-light-bg: #00000090;
+  --header-dark-bg: #ffffff50;
+  --footer-light-bg: #5a5a5a;
+  --footer-dark-bg: #c5c5c5;
+  --hover-light: #30303082;
+  --hover-dark: #ffffff82;
 }
 
 html {
@@ -12,7 +22,7 @@ html {
   min-height: 100%;
 }
 
-body:not(.footer) {
+html {
   /* Font styling starts here */
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -26,9 +36,11 @@ body:not(.footer) {
     var(--background),
     var(--background-2)
   );
+}
+
+body {
   margin: auto;
-  padding: 90px;
-  text-align: justify;
+  padding: 25px;
 }
 
 .header {
@@ -41,14 +53,13 @@ body:not(.footer) {
   text-align: center;
   margin: auto;
   align-content: center;
-  text-align: center;
 }
 
 .logo {
   display: flex;
   text-align: left;
   backdrop-filter: blur(5px);
-  background-color: #ffffff50;
+  background-color: var(--header-light-bg);
   opacity: 0.9;
   border-radius: 100px;
   padding: 15px;
@@ -56,12 +67,17 @@ body:not(.footer) {
 }
 
 .main-logo {
-  filter: invert(0);
+  filter: invert(1);
+}
+
+.social-links {
+  text-decoration: none;
+  color: var(--link-light-color);
 }
 
 .footer {
-  background-color: var(--background);
-  color: var(--text-color);
+  background-color: var(--footer-light-bg);
+  color: var(--text-color-dark);
   text-decoration: none;
   margin: auto;
   margin-bottom: 1%;
@@ -74,7 +90,42 @@ body:not(.footer) {
 }
 
 .social-icons {
+  filter: invert(1);
   max-height: 18px;
   align-items: center;
   text-align: center;
+}
+
+/* Dark mode colors */
+html.dark {
+  color: var(--text-color-dark);
+  background-image: linear-gradient(
+    to bottom right,
+    var(--background-dark-2),
+    var(--background-dark)
+  );
+}
+
+.dark .footer {
+  background-color: var(--footer-dark-bg);
+  color: var(--text-color);
+}
+
+.dark .logo {
+  background-color: var(--header-dark-bg);
+}
+
+.dark .main-logo {
+  filter: invert(0);
+}
+
+.dark .social-icons {
+  filter: invert(0);
+}
+
+.social-links {
+  color: var(--link-light-color);
+}
+.dark .social-links {
+  color: var(--link-dark-color);
 }

@@ -1,16 +1,19 @@
 .navigation {
   backdrop-filter: blur(5px);
-  background-color: #ffffff50;
+  background-color: var(--header-light-bg);
   opacity: 0.9;
   padding: 25px;
   font-size: 20px;
-  margin: 10px;
-  border-radius: 100px;
+  margin: auto;
+  border-radius: 50px;
   width: 90%;
+  text-align: center;
+  align-items: center;
+  align-content: center;
 }
 
 .links {
-  margin: 10px;
+  margin: auto;
   display: none;
 }
 
@@ -24,7 +27,7 @@
   padding: 15px;
   border-radius: 25px;
   text-decoration: none;
-  color: #50008d;
+  color: var(--link-light-color);
 }
 
 .expanded {
@@ -65,7 +68,7 @@
 
   .links a:hover,
   .links a:focus {
-    background-color: #ffffff82;
+    background-color: var(--hover-light);
     backdrop-filter: blur(5px);
     padding: 10px 15px;
     border-radius: 25px;
@@ -90,7 +93,93 @@
   height: 2px;
   margin: auto;
   margin-bottom: 5px;
-  background-color: var(--text-color);
+  background-color: var(--text-color-dark);
   border-radius: 50px;
   align-content: center;
+}
+
+.theme-icon {
+  display: flex;
+  text-align: left;
+  backdrop-filter: blur(5px);
+  background-color: var(--header-light-bg);
+  opacity: 0.9;
+  border-radius: 100px;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  margin: 25px;
+}
+
+/* Dark Mode starts*/
+
+.dark .hamburger .line {
+  /* display: block;
+  width: 30px;
+  height: 2px;
+  margin: auto;
+  margin-bottom: 5px; */
+  background-color: var(--text-color);
+  /* border-radius: 50px;
+  align-content: center; */
+}
+
+.dark .links a {
+  color: var(--link-dark-color);
+}
+
+.dark .navigation {
+  background-color: var(--header-dark-bg);
+}
+
+.dark .theme-icon {
+  background-color: var(--header-dark-bg);
+}
+
+.dark .links a:hover,
+.links a:focus {
+  background-color: var(--hover-dark);
+  backdrop-filter: blur(5px);
+  padding-inline: 100px;
+  border-radius: 25px;
+  padding: 15px;
+  margin: auto;
+  position: static;
+  display: block;
+  /* align-items: center;
+  justify-content: center; */
+  transition: all 0.1s ease-in-out;
+  position: static;
+}
+
+.dark .expanded {
+  display: unset;
+}
+
+@media screen and (min-width: 1060px) {
+  .dark .links a {
+    padding-inline: 20px;
+    display: inline;
+    padding: 10px 15px;
+  }
+
+  .dark .links {
+    display: block;
+    margin: auto;
+  }
+
+  .dark .links a:hover,
+  .links a:focus {
+    background-color: #ffffff82;
+    backdrop-filter: blur(5px);
+    padding: 10px 15px;
+    border-radius: 25px;
+    display: inline;
+    /* position: static; */
+    transition: all 0.1s ease-in-out;
+  }
+
+  .dark .hamburger {
+    display: none;
+  }
 }
