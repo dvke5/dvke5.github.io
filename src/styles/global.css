@@ -1,35 +1,45 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
+  /*Background Colors*/
   --background: #ffffff;
-  --background-2: #454545;
+  --background-2: #dddddd;
   --background-dark: #000000;
-  --background-dark-2: #5d5d5d;
+  --background-dark-2: #505050;
+
+  /*Text and link Colors*/
   --text-color: #000000;
   --text-color-dark: #ffffff;
-  --link-light-color: #e0b7ff;
-  --link-dark-color: #7f3fb1;
-  --header-light-bg: #00000090;
-  --header-dark-bg: #ffffff50;
+  --link-light-color: #3d3d3d;
+  --link-dark-color: #d0d0d0;
+
+  /*Header Color*/
+  --header-light-bg: #00000010;
+  --header-dark-bg: #ffffff10;
+  --hover-light: #93939382;
+  --hover-dark: #00000082;
+  --no-hover-light: #ffffff50;
+  --no-hover-dark: #00000050;
+
+  /*Footer Color*/
   --footer-light-bg: #5a5a5a;
   --footer-dark-bg: #c5c5c5;
-  --hover-light: #30303082;
-  --hover-dark: #ffffff82;
 }
 
 html {
   position: relative;
   min-height: 100%;
+  width: auto;
+  height: auto;
 }
 
 html {
-  /* Font styling starts here */
+  /* Font styling */
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
   color: var(--text-color);
-  /*Font styling ends here*/
 
   background-image: linear-gradient(
     to bottom right,
@@ -39,46 +49,36 @@ html {
 }
 
 body {
-  margin: auto;
   padding: 25px;
+  margin: auto;
 }
 
 .header {
   display: flex;
-  align-items: center;
   border-radius: 50px;
   position: sticky;
   top: 2%;
-  width: 90%;
-  text-align: center;
+  width: auto;
   margin: auto;
-  align-content: center;
 }
 
 .logo {
-  display: flex;
-  text-align: left;
-  backdrop-filter: blur(5px);
+  backdrop-filter: saturate(200%) blur(20px);
   background-color: var(--header-light-bg);
-  opacity: 0.9;
+  /* display: flex; */
+  /* text-align: left; */
   border-radius: 100px;
-  padding: 15px;
-  margin: 5px;
+  padding: 10px;
+  margin: auto;
 }
 
 .main-logo {
-  filter: invert(1);
-}
-
-.social-links {
-  text-decoration: none;
-  color: var(--link-light-color);
+  filter: invert(0);
 }
 
 .footer {
   background-color: var(--footer-light-bg);
   color: var(--text-color-dark);
-  text-decoration: none;
   margin: auto;
   margin-bottom: 1%;
   padding: 5px;
@@ -96,7 +96,12 @@ body {
   text-align: center;
 }
 
-/* Dark mode colors */
+.social-links {
+  text-decoration: none;
+  color: var(--link-dark-color);
+}
+
+/* Dark mode colors  */
 html.dark {
   color: var(--text-color-dark);
   background-image: linear-gradient(
@@ -116,16 +121,13 @@ html.dark {
 }
 
 .dark .main-logo {
-  filter: invert(0);
+  filter: invert(1);
 }
 
 .dark .social-icons {
   filter: invert(0);
 }
 
-.social-links {
-  color: var(--link-light-color);
-}
 .dark .social-links {
-  color: var(--link-dark-color);
+  color: var(--link-light-color);
 }

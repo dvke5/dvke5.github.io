@@ -1,14 +1,27 @@
 ---
 import Social from "./Social.astro";
+
+// Icons
 import fiverrLogo from "/public/assets/social/fiverr.svg";
 import githubLogo from "/public/assets/social/github.svg";
 import linkedinLogo from "/public/assets/social/linkedin.svg";
+
+// CSS files
+import "../styles/footer.css";
 ---
 
-<p>
-  &copy; Designed and developed by Dhruv Kakade (dvke5, deltakiro). I dont think
-  i got any rights for this reserved yet.
+<p class="copyright-text">
+  &copy; Designed and developed by Dhruv Kakade (dvke5,
+  <a
+    href="http://deltakiro.github.io/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    deltakiro
+  </a>
+  ). I don't think I got any rights for this reserved yet.
 </p>
+
 <Social
   icon={fiverrLogo}
   website="https://github.com"

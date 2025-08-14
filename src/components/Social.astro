@@ -2,24 +2,9 @@
 const { icon, website, username = "", platform } = Astro.props;
 ---
 
-<style>
-  :root {
-    --link-light-color: #50008d;
-    --link-dark-color: #d59fff;
-  }
-  .social-links {
-    text-decoration: none;
-    color: var(--link-light-color);
-  }
-  .dark .social-links {
-    text-decoration: none;
-    color: var(--link-dark-color);
-  }
-</style>
-
 <span>
   <img class="social-icons" src={`${icon.src}`} alt={`${website} icon`} />
-  <a class="social-links" href={`${website}/${username}`}
-    >{platform}&nbsp;&nbsp;</a
-  >
+  <a class="social-links" href={`${website}/${username}`} target="_blank">
+    {platform}&nbsp;&nbsp;
+  </a>
 </span>

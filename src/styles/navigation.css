@@ -1,80 +1,57 @@
 .navigation {
-  backdrop-filter: blur(5px);
+  backdrop-filter: saturate(200%) blur(20px);
   background-color: var(--header-light-bg);
-  opacity: 0.9;
   padding: 25px;
   font-size: 20px;
-  margin: auto;
+  margin: auto 10px;
   border-radius: 50px;
-  width: 90%;
-  text-align: center;
-  align-items: center;
-  align-content: center;
+  width: auto;
 }
 
 .links {
+  width: auto;
   margin: auto;
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease-in-out;
 }
 
 .links a {
-  display: block;
-  /* align-items: center;
-  justify-content: center; */
-  margin: auto;
-  position: static;
-  padding-inline: 100px;
+  display: flex;
+  justify-content: center;
+  color: var(--link-light-color);
+  background-color: var(--no-hover-light);
+  backdrop-filter: saturate(200%) blur(20px);
+  margin: 10px;
   padding: 15px;
   border-radius: 25px;
   text-decoration: none;
-  color: var(--link-light-color);
-}
-
-.expanded {
-  display: unset;
 }
 
 .links a:hover,
 .links a:focus {
-  background-color: #ffffff82;
+  background-color: var(--hover-light);
   backdrop-filter: blur(5px);
-  padding-inline: 100px;
-  border-radius: 25px;
-  padding: 15px;
-  margin: auto;
-  position: static;
-  display: block;
-  /* align-items: center;
-  justify-content: center; */
-  transition: all 0.1s ease-in-out;
-  position: static;
-}
-
-.expanded {
-  display: unset;
 }
 
 @media screen and (min-width: 1060px) {
-  .links a {
-    padding-inline: 20px;
-    display: inline;
-    padding: 10px 15px;
+  .links {
+    max-height: none;
+    overflow: visible;
   }
 
-  .links {
-    display: block;
+  .links a {
+    display: inline;
+    justify-content: space-evenly;
     margin: auto;
+    padding: 10px 15px;
+    border-radius: 25px;
   }
 
   .links a:hover,
   .links a:focus {
     background-color: var(--hover-light);
     backdrop-filter: blur(5px);
-    padding: 10px 15px;
-    border-radius: 25px;
-    display: inline;
-    /* position: static; */
-    transition: all 0.1s ease-in-out;
   }
 
   .hamburger {
@@ -87,45 +64,34 @@
   margin: auto;
 }
 
-.hamburger .line {
+.line {
   display: block;
-  width: 30px;
+  width: 50px;
   height: 2px;
-  margin: auto;
-  margin-bottom: 5px;
-  background-color: var(--text-color-dark);
+  margin: 5px auto;
+  background-color: var(--text-color);
   border-radius: 50px;
-  align-content: center;
+  transition: all 1s ease-in-out;
 }
 
 .theme-icon {
-  display: flex;
-  text-align: left;
-  backdrop-filter: blur(5px);
+  backdrop-filter: saturate(200%) blur(20px);
   background-color: var(--header-light-bg);
-  opacity: 0.9;
+  display: flex;
   border-radius: 100px;
-  width: auto;
-  height: auto;
   padding: 10px;
-  margin: 25px;
+  margin: auto;
 }
 
 /* Dark Mode starts*/
 
 .dark .hamburger .line {
-  /* display: block;
-  width: 30px;
-  height: 2px;
-  margin: auto;
-  margin-bottom: 5px; */
-  background-color: var(--text-color);
-  /* border-radius: 50px;
-  align-content: center; */
+  background-color: var(--text-color-dark);
 }
 
 .dark .links a {
   color: var(--link-dark-color);
+  background-color: var(--no-hover-dark);
 }
 
 .dark .navigation {
@@ -139,47 +105,23 @@
 .dark .links a:hover,
 .links a:focus {
   background-color: var(--hover-dark);
-  backdrop-filter: blur(5px);
-  padding-inline: 100px;
-  border-radius: 25px;
-  padding: 15px;
-  margin: auto;
-  position: static;
-  display: block;
-  /* align-items: center;
-  justify-content: center; */
-  transition: all 0.1s ease-in-out;
-  position: static;
-}
-
-.dark .expanded {
-  display: unset;
 }
 
 @media screen and (min-width: 1060px) {
-  .dark .links a {
-    padding-inline: 20px;
-    display: inline;
-    padding: 10px 15px;
-  }
-
-  .dark .links {
-    display: block;
-    margin: auto;
-  }
-
   .dark .links a:hover,
   .links a:focus {
-    background-color: #ffffff82;
-    backdrop-filter: blur(5px);
-    padding: 10px 15px;
-    border-radius: 25px;
-    display: inline;
-    /* position: static; */
-    transition: all 0.1s ease-in-out;
+    background-color: var(--hover-dark);
   }
+}
 
-  .dark .hamburger {
-    display: none;
-  }
+.change .line1 {
+  transform: translate(0, 7px) rotate(15deg);
+}
+
+.change .line2 {
+  opacity: 0;
+}
+
+.change .line3 {
+  transform: translate(0, -7px) rotate(-15deg);
 }
