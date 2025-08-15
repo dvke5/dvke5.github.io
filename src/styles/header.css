@@ -16,8 +16,8 @@
   backdrop-filter: blur(20px);
   background-color: var(--header-light-bg);
   padding: 25px;
+  margin: 25px;
   font-size: 20px;
-  margin: auto 10px;
   border-radius: 50px;
 }
 
@@ -81,7 +81,7 @@
 
 .hamburger {
   cursor: pointer;
-  margin: auto;
+  margin: 10px auto;
 }
 
 .line {
