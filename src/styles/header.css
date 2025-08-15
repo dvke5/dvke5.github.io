@@ -9,6 +9,8 @@
   background-color: var(--header-light-bg);
   border-radius: 100px;
   padding: 10px;
+  height: 100px;
+  width: 100px;
   margin: auto;
 }
 
@@ -23,16 +25,15 @@
 
 .main-logo {
   filter: invert(0);
-}
-.dark .main-logo {
-  filter: invert(1);
+  height: 100px;
+  width: auto;
 }
 
 .links {
   width: auto;
-  transition: max-height 1s ease-in-out;
   max-height: 0;
   overflow: hidden;
+  transition: max-height 1s ease-in-out;
 }
 
 .links a {
@@ -94,6 +95,18 @@
   transition: all 1s ease-in-out;
 }
 
+.change .line1 {
+  transform: translate(0, 7px) rotate(15deg);
+}
+
+.change .line2 {
+  opacity: 0;
+}
+
+.change .line3 {
+  transform: translate(0, -7px) rotate(-15deg);
+}
+
 /* Dark Mode starts*/
 
 .dark .hamburger .line {
@@ -105,12 +118,16 @@
   background-color: var(--no-hover-dark);
 }
 
+.dark .logo {
+  background-color: var(--header-dark-bg);
+}
+
 .dark .navigation {
   background-color: var(--header-dark-bg);
 }
 
-.dark .theme-icon {
-  background-color: var(--header-dark-bg);
+.dark .main-logo {
+  filter: invert(1);
 }
 
 .dark .links a:hover,
@@ -125,18 +142,6 @@
   }
 }
 
-.change .line1 {
-  transform: translate(0, 7px) rotate(15deg);
-}
-
-.change .line2 {
-  opacity: 0;
-}
-
-.change .line3 {
-  transform: translate(0, -7px) rotate(-15deg);
-}
-
-.dark .logo {
+.dark .theme-icon {
   background-color: var(--header-dark-bg);
 }
